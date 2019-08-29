@@ -1,0 +1,89 @@
+From 09e0727f75d209b755a61dceb6cab5609bbbd6e1 Mon Sep 17 00:00:00 2001
+From: Mike Sarahan <msarahan@gmail.com>
+Date: Thu, 29 Aug 2019 12:11:31 -0500
+Subject: [PATCH] update target platform
+
+---
+ src/vswhere.lib/vswhere.lib.vcxproj    | 6 +++---
+ src/vswhere/vswhere.vcxproj            | 6 +++---
+ test/vswhere.test/vswhere.test.vcxproj | 4 ++--
+ 3 files changed, 8 insertions(+), 8 deletions(-)
+
+diff --git a/src/vswhere.lib/vswhere.lib.vcxproj b/src/vswhere.lib/vswhere.lib.vcxproj
+index 1dfba7d..2422baf 100644
+--- a/src/vswhere.lib/vswhere.lib.vcxproj
++++ b/src/vswhere.lib/vswhere.lib.vcxproj
+@@ -16,19 +16,19 @@
+     <Keyword>Win32Proj</Keyword>
+     <RootNamespace>vswherelib</RootNamespace>
+     <TargetUniversalCRTVersion>10.0.16299.0</TargetUniversalCRTVersion>
+-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
++    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+   </PropertyGroup>
+   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+     <ConfigurationType>StaticLibrary</ConfigurationType>
+     <UseDebugLibraries>true</UseDebugLibraries>
+-    <PlatformToolset>v141_xp</PlatformToolset>
++    <PlatformToolset>v141</PlatformToolset>
+     <CharacterSet>Unicode</CharacterSet>
+   </PropertyGroup>
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+     <ConfigurationType>StaticLibrary</ConfigurationType>
+     <UseDebugLibraries>false</UseDebugLibraries>
+-    <PlatformToolset>v141_xp</PlatformToolset>
++    <PlatformToolset>v141</PlatformToolset>
+     <WholeProgramOptimization>true</WholeProgramOptimization>
+     <CharacterSet>Unicode</CharacterSet>
+   </PropertyGroup>
+diff --git a/src/vswhere/vswhere.vcxproj b/src/vswhere/vswhere.vcxproj
+index db2bdea..823b7bd 100644
+--- a/src/vswhere/vswhere.vcxproj
++++ b/src/vswhere/vswhere.vcxproj
+@@ -17,19 +17,19 @@
+     <Keyword>Win32Proj</Keyword>
+     <RootNamespace>vswhere</RootNamespace>
+     <TargetUniversalCRTVersion>10.0.16299.0</TargetUniversalCRTVersion>
+-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
++    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+   </PropertyGroup>
+   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+     <ConfigurationType>Application</ConfigurationType>
+     <UseDebugLibraries>true</UseDebugLibraries>
+-    <PlatformToolset>v141_xp</PlatformToolset>
++    <PlatformToolset>v141</PlatformToolset>
+     <CharacterSet>Unicode</CharacterSet>
+   </PropertyGroup>
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+     <ConfigurationType>Application</ConfigurationType>
+     <UseDebugLibraries>false</UseDebugLibraries>
+-    <PlatformToolset>v141_xp</PlatformToolset>
++    <PlatformToolset>v141</PlatformToolset>
+     <WholeProgramOptimization>true</WholeProgramOptimization>
+     <CharacterSet>Unicode</CharacterSet>
+   </PropertyGroup>
+diff --git a/test/vswhere.test/vswhere.test.vcxproj b/test/vswhere.test/vswhere.test.vcxproj
+index d6c04f5..27de546 100644
+--- a/test/vswhere.test/vswhere.test.vcxproj
++++ b/test/vswhere.test/vswhere.test.vcxproj
+@@ -17,14 +17,14 @@
+     <Keyword>Win32Proj</Keyword>
+     <RootNamespace>vswheretest</RootNamespace>
+     <TargetUniversalCRTVersion>10.0.16299.0</TargetUniversalCRTVersion>
+-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
++    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+     <ProjectSubType>NativeUnitTestProject</ProjectSubType>
+   </PropertyGroup>
+   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+     <ConfigurationType>DynamicLibrary</ConfigurationType>
+     <UseDebugLibraries>true</UseDebugLibraries>
+-    <PlatformToolset>v141_xp</PlatformToolset>
++    <PlatformToolset>v141</PlatformToolset>
+     <CharacterSet>Unicode</CharacterSet>
+     <UseOfMfc>false</UseOfMfc>
+   </PropertyGroup>
+-- 
+2.20.1.windows.1
+

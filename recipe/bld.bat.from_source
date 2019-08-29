@@ -1,0 +1,2 @@
+nuget restore vswhere.sln
+msbuild /p:Configuration=Release /p:Platform=x86 vswhere.sln 

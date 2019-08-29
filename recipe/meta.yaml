@@ -1,0 +1,36 @@
+{% set name = "vswhere" %}
+{% set version = "2.7.1" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  # would be nice to build from source, but I haven't been able to get win SDKs to work.
+  #    I see errors like these:
+  # https://social.msdn.microsoft.com/Forums/vstudio/en-US/561b8421-8fd3-469c-8b38-cc6562d3b465/problem-building-ccli-project-in-vs-2017?forum=vcgeneral
+  # url: https://github.com/microsoft/vswhere/archive/{{ version }}.tar.gz
+  fn: vswhere-{{ version }}.exe
+  url: https://github.com/microsoft/vswhere/releases/download/{{ version }}/vswhere.exe
+  sha256: cda89392a8f4ca8a07d550c884c17e4c4764cbbf87b724dc75c9b3c467d4d6af
+
+build:
+  number: 0
+  skip: True  # [not win or vc < 14]
+  script:
+    - MOVE vswhere-{{ version }}.exe %LIBRARY_BIN%\vswhere.exe
+
+test:
+  commands:
+    - vswhere
+
+about:
+  home: https://github.com/microsoft/vswhere
+  license: MIT
+  license_family: MIT
+  # license_file: LICENSE.txt
+  summary: executable that can be used to find Visual Studio and related tools
+
+extra:
+  recipe-maintainers:
+    - msarahan
