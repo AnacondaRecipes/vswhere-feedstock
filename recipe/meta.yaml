@@ -22,11 +22,14 @@ about:
   home: https://github.com/microsoft/vswhere
   license: MIT
   license_file: LICENSE.txt
+  license_family: MIT
   summary: CLI tool to locate Visual Studio 2017 and newer installations
   description: |
     vswhere is designed to be a redistributable, single-file executable that
     can be used in build or deployment scripts to find where Visual Studio
     - or other products in the Visual Studio family - is located.
+  dev_url: https://github.com/microsoft/vswhere
+  doc_url: https://github.com/Microsoft/vswhere/wiki
 
 extra:
   recipe-maintainers:
