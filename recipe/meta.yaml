@@ -35,7 +35,5 @@ about:
 extra:
   recipe-maintainers:
     - wolfv
-
-skip-lints:
-  # binary repack
-  - missing_section
+  skip-lints:
+    - missing_section
