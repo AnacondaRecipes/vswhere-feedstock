@@ -16,6 +16,7 @@ build:
 
 test:
   commands:
+    - if not exist %LIBRARY_BIN%\\vswhere.exe  exit 1
     - vswhere
 
 about:
@@ -34,3 +35,7 @@ about:
 extra:
   recipe-maintainers:
     - wolfv
+
+skip-lints:
+  # binary repack
+  - missing_section
